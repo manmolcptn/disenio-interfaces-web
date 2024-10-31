@@ -244,12 +244,14 @@ body{
     margin-top: 40px;
     cursor: pointer;
     /* transicion */
+    transition: all 500ms;
 
 }
 /*efecto*/
 .cards__card:hover{
     background-color: var(--color-bg);
 }
+
 
 .cards__card:last-child{
     margin-right: 0px;
@@ -265,8 +267,20 @@ body{
     margin: 0px auto;
 }
 /*efecto hover en la carta modificamos card__icon */
+.cards__card:hover .card__icon{
+    font-size: 70px;
+    color: var(--color-primary);
+    animation: mueveIcono 500ms linear;
+}
 
-/* keyframes */
+@keyframes mueveIcono {
+    from{
+        transform: translateY(-200%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
 
 .card__category{
     width: 100%;
@@ -279,6 +293,17 @@ body{
     transition: all 500ms;
 }
 /*efecto hover en la carta - modificamos card_category */
+.cards__card:hover .card__category{
+    animation: moverCategoria 500ms linear;
+    color: white;
+}
+@keyframes moverCategoria {
+    from{
+        transform: translateX(-200%);
+    }to{
+        transform: translateX(0%);
+    }
+}
 
 .card__description{
     font-family: "TrebuchetMS";
@@ -286,9 +311,20 @@ body{
     color: var(--color-text-title);
     font-size: 14px;
     /* transición */
+    transition: all 500ms;
 }
 /* efecto de hover en la carta. tocamos card__description */
-
+.cards__card:hover .card__description{
+    animation: moverDescripcion 500ms linear;
+    color: white;
+}
+@keyframes moverDescripcion{
+    from{
+        transform: translateY(200%);
+    }to{
+        transform: translateY(0%);
+    }
+}
 
 .clearfix{
     float: none;
