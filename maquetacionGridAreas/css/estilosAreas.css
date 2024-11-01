@@ -16,7 +16,7 @@ body{
 */
 .website{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(1, 5fr);
     grid-template-rows: 120px 70px 2fr 70px;
 
     grid-template-areas: 
