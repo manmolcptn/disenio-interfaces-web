@@ -85,14 +85,14 @@ body {
 }
 
 .header__logo {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   width: 200px;
   height: 50px;
   background-color: var(--color-primary);
   text-align: center;
-  margin-top: 8px;
-  margin-left: 20px;
+  position: relative;
+  top: 8px;
+  left: 20px;
   letter-spacing: 1px;
   cursor: pointer;
   overflow: hidden;
@@ -102,7 +102,7 @@ body {
 
 .header__logo h3 {
   font-size: 40px;
-  margin-right: 65px;
+  margin-left: 10px;
   /* transición */
   transition: all 500ms;
 }
@@ -127,36 +127,22 @@ body {
   color: black;
 }
 
-.logo__gear {
-  font-size: 30px;
-  margin-top: 4px;
+.logo__silla {
+  height: 85%;
   margin-left: 26px;
-  /*A la hora de crear animación
-    animation-name: giroRueda;
-    animation-duration: 4s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;*/
-  /*Equivalente a definirlo todo en esto*/
-  /* animation: giroRueda 3s linear infinite; */
+  margin-top: 4px;
 }
-
-/* animación logo rueda */
-/* @keyframes giroRueda{
-    100%{
-        transform: rotateZ(360deg);
-    }
-} */
 
 /* efecto de desaparece y vuelve keyframes */
-.header__logo:hover .logo__gear {
-  animation: salidaRueda 2s;
+.header__logo:hover .logo__silla {
+  animation: salidaSilla 2s;
 }
-@keyframes salidaRueda {
+@keyframes salidaSilla {
   0% {
-    transform: translateY(200%) rotateZ(0deg);
+    transform: translateX(-200%) rotateZ(0deg);
   }
   100% {
-    transform: translateY(0%) rotateZ(360deg);
+    transform: translateX(0%) rotateZ(360deg);
   }
 }
 
@@ -243,6 +229,7 @@ body {
 /* Tarjetas */
 .content__cards {
   display: flex;
+  justify-content: center;
   /* 
     ES LO MISMO!!
     display:grid;
@@ -264,10 +251,6 @@ body {
 /*efecto*/
 .cards__card:hover {
   background-color: var(--color-bg);
-}
-
-.cards__card:last-child {
-  margin-right: 0px;
 }
 
 .cards__card .card__icon {
