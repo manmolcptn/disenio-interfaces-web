@@ -9,6 +9,7 @@
         $(document).ready(function(){
             $("#input").keydown(function(event){
                 $("#tecla").text("Se ha pulsado la tecla: " + event.key);
+                //Con .val() accedemos al valor del input y le ponemos un valor
                 $("#input").val("");
             });
         });
