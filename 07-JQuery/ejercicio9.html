@@ -14,7 +14,8 @@
 
     6. Vuelve a repetir el comportamiento del punto 4 pero ahora solo se producirá la primera vez que se pulse la tecla.
 
-    7. Al pasar el ratón por cada uno de los títulos de los módulos de segundo se mostrará la cantidad de horas semanales. Esta información emergente se mostrará a continuación de donde ubiquemos el ratón. Utiliza hover.
+    7. Al pasar el ratón por cada uno de los títulos de los módulos de segundo se mostrará la cantidad de horas semanales. 
+    Esta información emergente se mostrará a continuación de donde ubiquemos el ratón. Utiliza hover.
 
     8. Ahora aparecerá el número de horas cuando el usuario haga clic sobre el nombre del módulo. Realiza una delegación de eventos utilizando on.
 
@@ -26,7 +27,7 @@
     <title>Ejercicios DOM Básicos</title>
     <style type="text/css">
 
-        ul {
+        li>ul {
             display: none;
         }
 
@@ -59,6 +60,14 @@
             //Ejercicio 5
                 // $(document).unbind();
             //Ejercicio 6
+                // $(document).on("keypress", function(){
+                //         $("ul").show(2000);
+                //         $("ul").hide(3000);
+                // })
+            //Ejercicio 7
+                $(document).on("hover", function(){
+                    $(".azul").show(2000);
+                })
         });
     
     </script>
