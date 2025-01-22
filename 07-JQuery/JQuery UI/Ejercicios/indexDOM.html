@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title id="firstTitle">Document</title>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
   </head>
@@ -168,7 +168,7 @@
         });
     </script> -->
     <!--Ejercicio14-->
-    <div>div 1</div>
+    <!-- <div>div 1</div>
     <div>div 2</div>
     <div>div 3</div>
     <div>div 4</div>
@@ -178,6 +178,74 @@
                 $("div:nth-child(2)").css("background-color", "yellow");
             });
         });
-    </script>
+    </script> -->
+    <!--Ejercicio15-->
+    <!-- <nav>
+        <a href="">a 1</a>
+        <a href="">a 2</a>
+        <a href="">a 3</a>
+        <a href="">a 4</a>
+        <a href="">a 5</a>
+        <a href="">a 6</a>
+    </nav>
+    <script>
+        $(document).ready(() =>{
+            console.log($("a").hasClass("activo"));
+            $(document).on("click", ()=>{
+                $("a").addClass("activo");
+                console.log($("a").hasClass("activo"));
+            });
+        });
+    </script> -->
+    <!--Ejercicio16-->
+    <!-- <script>
+        $(document).ready(()=>{
+            $("body").append("<p>Bienvenido</p>");
+        });
+    </script> -->
+    <!--Ejercicio17-->
+    <!-- <img 
+        src="https://i0.wp.com/streetliftingacademy.com/wp-content/uploads/2021/09/streetlifting-4-1.png?fit=1024%2C1024&ssl=1" 
+        alt="" 
+        id="imagen">
+    <script>
+        $(document).ready(()=>{
+            $(this).on("click", ()=>{
+                $("#imagen").attr("src", "https://i0.wp.com/streetliftingacademy.com/wp-content/uploads/2021/09/streetlifting-entrenamiento-nutricion-1-1.jpg?fit=1024%2C1024&ssl=1");
+            });
+        });
+    </script> -->
+    <!--Ejercicio18-->
+    <!-- <ol>
+        <li class="producto">producto 1</li>
+        <li class="producta">producto 2</li>
+        <li class="producto">producto 3</li>
+        <li class="producto">producto 4</li>
+    </ol>
+    <script>
+        $(document).ready(()=>{
+            $(this).on("click", ()=>{
+                $(".producto").attr("data-id", "ensaladas");
+            });
+        });
+    </script> -->
+    <!--Ejercicio19-->
+    <!-- <input type="text" id="nombre" value="Migue">
+    <script>
+        $(document).ready(()=>{
+            $(this).on("click", ()=>{
+                $("#nombre").val("Juan Pérez");
+            });
+        });
+    </script> -->
+    <!--Ejercicio20-->
+    <!-- <script>
+        $(document).ready(()=>{
+            $(document).on("click", ()=>{
+                $("title[id=firstTitle]").remove();
+                $("head").append("<title>Página web interactiva</title>");
+            });
+        });
+    </script> -->
 </body>
 </html>
